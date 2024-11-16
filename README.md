@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/7622dfde-f0db-4d6b-a3bb-6c5081be0bf5
+
 # **Stock Trading Android App**
 
 The **Stock Trading App** is a mobile application designed to provide users with a seamless and intuitive platform for stock market analysis and trading. Built with **Android Studio** and **Kotlin**, the app integrates with the same backend as the Stock Search web application, offering powerful features such as real-time stock data, detailed insights, portfolio management, and interactive charts.
