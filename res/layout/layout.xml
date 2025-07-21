@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvStocks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="Stocks"
+                    android:textColor="#000"
+                    android:textSize="80px"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="?android:attr/actionModeWebSearchDrawable"
+                    app:tint="@color/black" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="?attr/actionModeCloseDrawable"
+                    app:tint="@color/black" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:layout_toLeftOf="@id/btnClear"
+                    android:layout_toRightOf="@id/btnBack"
+                    android:background="@null"
+                    android:hint="Search" />
+
+                <ImageButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="120px"
+                    android:layout_height="150px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    app:tint="@android:color/black" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="120px"
+                    android:layout_height="150px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/star_border" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- Include Stock Details Layout -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/port"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/gray"
+                    android:text="Portfolio"
+                    android:textSize="80px"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:id="@+id/Wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="187dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="186dp"
+                            android:layout_height="30dp"
+                            android:text="Net Worth"
+                            android:textSize="80px"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvNetWorth"
+                            android:layout_width="192dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="203dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="31dp"
+                            android:gravity="right"
+                            android:text="Cash Balance"
+                            android:textSize="80px"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCashBalance"
+                            android:layout_width="195dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:gravity="right"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/portfolioRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/fav"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:background="@color/gray"
+                    android:text="Favorite"
+                    android:textSize="80px"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvPoweredBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="Powered by Finnhub"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:visibility="gone" />
+
+                <!-- Include Stock Details Layout -->
+                <include layout="@layout/stock_details_layout" />
+
+                <!-- Include Charts Layout -->
+                <include layout="@layout/charts_layout" />
+
+                <!-- Include Portfolio Layout -->
+                <include layout="@layout/portfolio_layout" />
+
+                <!-- Include Stats Layout -->
+                <include layout="@layout/stats_layout" />
+
+                <include
+                    layout="@layout/about_layout" />
+                <include
+                    layout="@layout/insights_layout" />
+
+                <FrameLayout
+                    android:id="@+id/chart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:visibility="visible" />
+
+                <include
+                    layout="@layout/recommendation_layout"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/fragment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:visibility="gone" />
+                <include
+                    layout="@layout/eps_layout"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/News"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="News"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="vertical" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="170dp"
+        android:layout_marginVertical="300dp"
+        android:visibility="gone" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

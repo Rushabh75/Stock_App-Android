@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/About"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/black"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:text="IPO Start Date"
+                android:padding="4dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvIPOStartDate"
+                android:padding="4dp"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Industry"
+                android:padding="4dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvIndustry"
+                android:padding="4dp"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Webpage"
+                android:padding="4dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvWebpage"
+                android:padding="4dp"
+                android:autoLink="web"
+                android:textColor="@color/link"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Company Peers"
+                android:padding="4dp"
+                android:textColor="@color/black"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp">
+                <LinearLayout
+                    android:id="@+id/llCompanyPeers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="@color/link"
+                    android:padding="4dp"/>
+            </HorizontalScrollView>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

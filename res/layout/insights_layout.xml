@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:visibility="gone"
+    android:id="@+id/sentiments">
+
+    <TextView
+        android:layout_width="373dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="8dp"
+        android:text="Insights"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Social Sentiments"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:gravity="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2"
+        android:background="@color/white">
+
+        <!-- Header Row -->
+        <TableRow
+            android:background="@color/gray">
+
+            <TextView
+                android:id="@+id/tvCompanysName"
+                android:layout_width="124dp"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="126dp"
+                android:padding="4dp"
+                android:text="MSRP"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:padding="4dp"
+                android:text="Change"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <!-- Total Row -->
+        <TableRow>
+            <TextView
+                android:padding="4dp"
+                android:text="Total"
+                android:background="@color/gray"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvTotalMSRP"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@color/lightgray"/>
+            <TextView
+                android:id="@+id/tvTotalChange"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@color/lightgray"/>
+        </TableRow>
+
+        <!-- Positive Row -->
+        <TableRow>
+            <TextView
+                android:padding="4dp"
+                android:text="Positive"
+                android:background="@color/gray"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvPositiveMSRP"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@color/lightgray"/>
+            <TextView
+                android:id="@+id/tvPositiveChange"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@color/lightgray"/> <!-- Placeholder for alignment -->
+        </TableRow>
+
+        <!-- Negative Row -->
+        <TableRow>
+            <TextView
+                android:padding="4dp"
+                android:text="Negative"
+                android:background="@color/gray"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvNegativeMSRP"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@color/lightgray"/>
+            <TextView
+                android:id="@+id/tvNegativeChange"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@color/lightgray"/> <!-- Placeholder for alignment -->
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
